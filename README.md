@@ -33,18 +33,16 @@ SDK API的调用集中在SDClient.cpp中
 <br>
 
 
-::: tip
+
 ffmpeg制作任意分辨率H264测试码流命令：
-:::
 
 ```js
 ffmpeg.exe -f lavfi -i testsrc=duration=100:size=1280x720:rate=25:decimals=2 -pix_fmt yuv420p -vcodec libx264  -profile:v high -x264opts force-cfr:fps=25:keyint=50:min-keyint=1:ref=1:bitrate=1600:bframes=0  -t 30  -y  output.h264
 #本命令即生成1参考帧、无B帧、720P分辨率、1.6Mbps的H264测试流
 ```
 
-::: tip
+
 测试工程使用VS2010或更高版本编译
-:::
 
 
 ---
